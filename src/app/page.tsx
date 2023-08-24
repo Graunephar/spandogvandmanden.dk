@@ -1,7 +1,8 @@
 import React from 'react';
-import { ImageRotator } from '@/components/ImageRotator';
 import TobiPage from "@/components/TobiPage";
 import {getRandomImage, getRandomQuote} from "@/utils/random";
+
+export const runtime = 'edge';
 
 function YourMainPage() {
     const initialImageSource = getRandomImage();

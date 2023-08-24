@@ -6,8 +6,6 @@ import { ImageRotator } from '@/components/ImageRotator';
 function TobiPage({ initialImageSource, quote }: { initialImageSource: string, quote: string }) {
     const [isSpinning, setIsSpinning] = useState(false);
 
-
-
     const handleButtonSpin = () => {
         setIsSpinning(true);
         setTimeout(() => {

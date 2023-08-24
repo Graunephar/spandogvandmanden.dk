@@ -1,3 +1,6 @@
+export const runtime = 'edge';
+
+
 const imageUrls = [
     '/img/flamingo.png',
     '/img/hest.png',
