@@ -5,9 +5,10 @@ import Image from 'next/image';
 
 interface ImageRotatorProps {
     spin: boolean;
+    src: string; // Add the prop for image source
 }
 
-export function ImageRotator({ spin }: ImageRotatorProps) {
+export function ImageRotator({ spin, src }: ImageRotatorProps) {
     const [rotationDegree, setRotationDegree] = useState(0);
     const [isSpinning, setIsSpinning] = useState(false);
 
@@ -26,9 +27,9 @@ export function ImageRotator({ spin }: ImageRotatorProps) {
     };
 
     return (
-        <div className={`image-container ${isSpinning ? 'spin' : ''}`} onClick={handleImageClick}>
+        <div className={`tobiImage image-container ${isSpinning ? 'spin' : ''}`} onClick={handleImageClick}>
             <Image
-                src="/img/skovl.jpg"
+                src={src} // Use the src passed as a prop
                 alt="Background Image"
                 layout="fill"
                 objectFit="contain"

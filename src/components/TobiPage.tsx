@@ -6,6 +6,21 @@ import { ImageRotator } from '@/components/ImageRotator';
 function TobiPage() {
     const [isSpinning, setIsSpinning] = useState(false);
 
+    const imageUrls = [
+        '/img/flamingo.png',
+        '/img/hest.png',
+        '/img/mangespande.png',
+        '/img/merehest.png',
+        '/img/spande.png',
+        // ... add more image URLs as needed
+    ];
+
+    const getRandomImage = () => {
+        const randomIndex = Math.floor(Math.random() * imageUrls.length);
+        return imageUrls[randomIndex];
+    };
+
+
     const handleButtonSpin = () => {
         setIsSpinning(true);
         setTimeout(() => {
@@ -15,7 +30,7 @@ function TobiPage() {
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <ImageRotator spin={isSpinning} />
+            <ImageRotator spin={isSpinning} src={getRandomImage()} /> {/* Pass the random image source */}
             <button className="spin-button" onClick={handleButtonSpin}>
                 Drej mig rundt
             </button>
