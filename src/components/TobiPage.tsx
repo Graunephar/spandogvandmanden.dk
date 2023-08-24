@@ -16,6 +16,7 @@ function TobiPage() {
 
     const getRandomImage = () => {
         const randomIndex = Math.floor(Math.random() * imageUrls.length);
+        console.log(randomIndex)
         return imageUrls[randomIndex];
     };
 
