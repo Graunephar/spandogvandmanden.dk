@@ -12,7 +12,6 @@ function TobiPage() {
         '/img/mangespande.png',
         '/img/merehest.png',
         '/img/spande.png',
-        // ... add more image URLs as needed
     ];
 
     const getRandomImage = () => {
