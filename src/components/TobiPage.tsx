@@ -1,24 +1,12 @@
 'use client'
 
+import { getRandomImage } from '@/utils/random'; // Replace with the actual path to your utility function
 import React, { useState } from 'react';
 import { ImageRotator } from '@/components/ImageRotator';
 
-function TobiPage() {
+function TobiPage({ initialImageSource }: { initialImageSource: string }) {
     const [isSpinning, setIsSpinning] = useState(false);
 
-    const imageUrls = [
-        '/img/flamingo.png',
-        '/img/hest.png',
-        '/img/mangespande.png',
-        '/img/merehest.png',
-        '/img/spande.png',
-    ];
-
-    const getRandomImage = () => {
-        const randomIndex = Math.floor(Math.random() * imageUrls.length);
-        console.log(randomIndex)
-        return imageUrls[randomIndex];
-    };
 
 
     const handleButtonSpin = () => {
@@ -31,7 +19,7 @@ function TobiPage() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
             <h1>"Jeg er snedker, men i Tivoli laver jeg blot spand og vand"</h1>
-            <ImageRotator spin={isSpinning} src={getRandomImage()} /> {/* Pass the random image source */}
+            <ImageRotator spin={isSpinning} src={initialImageSource} /> {/* Pass the random image source */}
             <button className="spin-button" onClick={handleButtonSpin}>
                 Drej mig rundt
             </button>
@@ -43,5 +31,6 @@ function TobiPage() {
         </main>
     );
 }
+
 
 export default TobiPage;

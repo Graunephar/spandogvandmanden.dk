@@ -34,6 +34,7 @@ export function ImageRotator({ spin, src }: ImageRotatorProps) {
                 layout="fill"
                 objectFit="contain"
                 quality={100}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 1000px"
                 style={{ transform: `rotate(${rotationDegree}deg)` }}
             />
             <style jsx>{`
