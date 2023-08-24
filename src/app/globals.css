@@ -25,6 +25,13 @@ body {
   background-repeat: no-repeat;
 }
 
+h1 {
+  color: white;
+  font-size: 2em;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+}
+
 
 /* BackgroundImage.module.css */
 .backgroundImage {

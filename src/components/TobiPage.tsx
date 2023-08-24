@@ -29,6 +29,7 @@ function TobiPage() {
 
     return (
         <main className="flex min-h-screen flex-col items-center justify-between p-24">
+            <h1>"Jeg er snedker, men i Tivoli laver jeg blot spand og vand"</h1>
             <ImageRotator spin={isSpinning} src={getRandomImage()} /> {/* Pass the random image source */}
             <button className="spin-button" onClick={handleButtonSpin}>
                 Drej mig rundt
